@@ -4,9 +4,17 @@ import UIKit
 
 var str = "Hello, playground"
 
-var a = 1123
-var b = "613"
+var a = 12
+var b = "7"
+let bx:Int? = b.toInt()
 var c = 5
+
+if let variable:Int? = b.toInt(){
+    println(variable! + a)
+} else {
+    println("error")
+}
+
 var d = a + b.toInt()!
 
 var e = b.toInt()
@@ -18,6 +26,13 @@ println(b.toInt())
 println(a + c)
 println("some text")
 
+var greeting:String? = "Hello World"
+greeting = nil
+if let message = greeting? {
+    println(message)
+} else {
+    println("No Greeting Available")
+}
 
 var result = "result = " + b
 
@@ -185,11 +200,13 @@ myInt = nil
 
 myInt!
 
-
 myInt!
 
 
-
+var myView:UIView = UIView()
+myView.frame = CGRectMake(0, 0, 320, 568)
+myView.backgroundColor = UIColor.blueColor()
+myView
 
 
 
