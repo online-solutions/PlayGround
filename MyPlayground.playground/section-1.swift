@@ -2,6 +2,16 @@
 
 import UIKit
 
+// always fail on first time, I don't know why, maybe it's a bug
+let string = "42"
+if let number = string.toInt() {
+    println("Got the number: \(number)")
+} else {
+    println("Couldn't convert to a number")
+}
+// prints "Got the number: 42"
+
+
 var str = "Hello, playground"
 
 var a = 12
@@ -198,15 +208,41 @@ var yourInt = myInt
 
 myInt = nil
 
-myInt!
-
-myInt!
+// break here
+//myInt!
 
 
 var myView:UIView = UIView()
 myView.frame = CGRectMake(0, 0, 320, 568)
 myView.backgroundColor = UIColor.blueColor()
 myView
+
+var dictionary: Dictionary = [
+    "Primes":[1,3,6,2,3,11],
+    "Squares":[3,5,7,2,2]
+]
+
+func greet (name:String) -> String{
+    return "Hello \(name)"
+}
+
+
+println(greet("Lite"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
