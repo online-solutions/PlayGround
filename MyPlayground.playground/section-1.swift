@@ -38,7 +38,7 @@ println("some text")
 
 var greeting:String? = "Hello World"
 greeting = nil
-if let message = greeting? {
+if let message = greeting {
     println(message)
 } else {
     println("No Greeting Available")
@@ -215,7 +215,7 @@ myInt = nil
 var myView:UIView = UIView()
 myView.frame = CGRectMake(0, 0, 320, 568)
 myView.backgroundColor = UIColor.blueColor()
-myView
+
 
 var dictionary: Dictionary = [
     "Primes":[1,3,6,2,3,11],
@@ -229,15 +229,29 @@ func greet (name:String) -> String{
 
 println(greet("Lite"))
 
+var backgroundDict:Dictionary<String, String> = Dictionary()
+backgroundDict = ["Background1":"background1.png", "Background2":"background2"]
+var backgroundImage:UIImage? = UIImage(named: backgroundDict["Background1"]!)
+
+let width:CGFloat = 320
+let height:CGFloat = 568
+var view:UIView = UIView(frame: CGRectMake(0, 0, width, height));
+var imageView:UIImageView = UIImageView()
+imageView = UIImageView(frame: view.frame);
+
+imageView.image = backgroundImage;
 
 
+var v = UIView(frame: CGRectMake(0, 0, 200, 200))
 
+var btn = UIButton(frame: CGRectMake(0, 0, 100, 32))
 
+btn.setTitle("MyButton", forState: UIControlState.Normal)
+btn.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
 
+v.addSubview(btn)
 
-
-
-
+v
 
 
 
