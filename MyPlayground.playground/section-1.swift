@@ -254,11 +254,25 @@ v.addSubview(btn)
 v
 
 
+// closures
 
+import Foundation
 
+let names = ["Kenny", "Chris", "Lucy", "Adam"]
 
+func alphabetic(s1: String, s2: String) -> Bool{
+    return s1 > s2
+}
 
+sorted(names, alphabetic)
 
+sorted(names, { (s1: String, s2: String) -> Bool in return s1 < s2 })
+
+sorted(names, {s1, s2 -> Bool in return s1 < s2 })
+
+sorted(names, {s1, s2 in s1 < s2 })
+
+sorted(names) {$0 < $1}
 
 
 
